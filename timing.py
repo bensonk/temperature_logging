@@ -2,6 +2,7 @@
 from serial import Serial
 from datetime import datetime as dt
 
+oldtime = dt.now()
 for line in Serial("/dev/ttyUSB0"):
     print line.strip()
     newtime = dt.now()
